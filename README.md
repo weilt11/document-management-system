@@ -38,3 +38,34 @@
     *   登录后即可开始使用所有文档管理功能。
 
 ## 📁 项目结构与技术栈
+document-management-system/
+├── public/ # 静态资源
+├── src/
+│ ├── components/ # 可复用组件
+│ ├── pages/ # 页面组件 (登录、文档管理、用户管理等)
+│ ├── services/ # 核心服务 (AuthService, DocumentService)
+│ └── ...
+├── package.json # 项目依赖与脚本
+└── README.md # 本文件
+
+**主要技术栈**：
+- **前端框架**: React 18
+- **UI 组件库**: Ant Design 5
+- **路由管理**: React Router DOM 6
+- **状态管理**: React Context API
+- **构建工具**: Create React App
+
+## 🔧 核心服务接口
+项目采用纯前端架构，核心业务逻辑封装在 `src/services/` 下：
+- **`AuthService.js`**：处理用户认证、注册与会话管理。
+- **`DocumentService.js`**：处理所有文档操作，利用 `FileReader API` 实现文件与Base64的转换。
+
+## 📝 实验报告关联
+本系统作为《Web应用开发与安全》课程实验的基础平台：
+- **实验一**：实现了本系统的全部功能。
+- **实验二**：在本系统基础上，搭建了模拟的SQL注入漏洞环境 (`vulnerable-server.js`) 与安全防护环境 (`safe-server.js`)，用于进行Web安全攻防实验。
+
+## 🛠️ 构建与部署
+构建用于生产环境的优化版本：
+```bash
+npm run build
